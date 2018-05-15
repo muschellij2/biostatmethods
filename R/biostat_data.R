@@ -7,6 +7,7 @@
 #'
 #' @examples
 #' biostat_data("bmi_age.txt")
+#' biostat_data("FLAIR.nii.gz")
 biostat_data = function(...) {
   res = system.file(
   "extdata",

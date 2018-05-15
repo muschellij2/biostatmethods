@@ -24,6 +24,22 @@ you would like to download these, they can be accessed from
 
 should be links that will download the data (if you click Save As).
 
+## Data Inside the Package
+
+If you want to access the data from the book, there is a simple function
+`biostat_data` that will return the filenames of these files.
+
+``` r
+library(biostatmethods)
+biostat_data("bmi_age.txt")
+biostat_data("FLAIR.nii.gz")
+```
+
+One of the reasons that we included these as files rather than attached
+them into the package is that we believe data importing is one of the
+most important parts of data analysis and would like readers to get
+comfortable with that, whether it be a text file or a brain image.
+
 ## Installation
 
 You can install `biostatmethods` from GitHub with:
