@@ -13,6 +13,17 @@ The goal of `biostatmethods` is to provide accompanying code and data
 from the book [“Methods in Biostatistics with
 R”](https://leanpub.com/biostatmethods).
 
+## Accessing the Data
+
+All the data from the book is located in the `inst/extdata` folders. If
+you would like to download these, they can be accessed from
+<http://johnmuschelli.com/>. For example:
+
+<http://johnmuschelli.com/biostatmethods/inst/extdata/bmi_age.txt>
+<http://johnmuschelli.com/biostatmethods/inst/extdata/NIfTI/FLAIR.nii.gz>
+
+should be links that will download the data (if you click Save As).
+
 ## Installation
 
 You can install `biostatmethods` from GitHub with:
