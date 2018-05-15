@@ -1,0 +1,18 @@
+Package: biostatmethods
+Version: 0.1.0
+Title: Data and Code for Methods in Biostatistics in R
+Description: Accompanying code and data from the book "Methods in Biostatistics with R".
+Authors@R: c(person(given = "John",family = "Muschelli",email = "muschellij2@gmail.com",role = c("aut", "cre"),comment = c(ORCID = "0000-0001-6469-1750")))
+License: GPL-3
+Suggests: 
+    knitr,
+    rmarkdown,
+    covr,
+    testthat
+Encoding: UTF-8
+LazyData: true
+ByteCompile: true
+Type: Package
+VignetteBuilder: knitr
+URL: https://github.com/muschellij2/biostatmethods
+BugReports: https://github.com/muschellij2/biostatmethods/issues
