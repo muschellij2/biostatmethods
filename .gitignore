@@ -3,4 +3,4 @@
 .RData
 .Ruserdata
 inst/doc
-inst/extdata/*
+inst/extdata/shhs*

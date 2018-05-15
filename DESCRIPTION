@@ -2,8 +2,29 @@ Package: biostatmethods
 Version: 0.1.0
 Title: Data and Code for Methods in Biostatistics in R
 Description: Accompanying code and data from the book "Methods in Biostatistics with R".
-Authors@R: c(person(given = "John",family = "Muschelli",email = "muschellij2@gmail.com",role = c("aut", "cre"),comment = c(ORCID = "0000-0001-6469-1750")))
+Authors@R: c(
+    person(given = "John",family = "Muschelli",
+    email = "muschellij2@gmail.com",role = c("aut", "cre"),
+    comment = c(ORCID = "0000-0001-6469-1750")),
+    person(given = "Ciprian",family = "Crainiceanu",
+    role = "aut"),
+    person(given = "Brian",family = "Caffo",
+    role = "aut")
+    )
 License: GPL-3
+Imports:
+    tidyverse,
+    matrixStats,
+    oro.nifti,
+    VGAM,
+    corrplot,
+    mgcv,
+    fields,
+    ResourceSelection,
+    plotly,
+    broom,
+    dslabs,
+    binom
 Suggests: 
     knitr,
     rmarkdown,

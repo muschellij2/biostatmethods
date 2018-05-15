@@ -1,0 +1,7 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+^biostatmethods\.Rproj$
+^LICENSE\.md$
+^README\.Rmd$
+^appveyor\.yml$
+^\.travis\.yml$
