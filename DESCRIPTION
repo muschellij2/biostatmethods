@@ -12,7 +12,11 @@ Authors@R: c(
     role = "aut")
     )
 License: GPL-3
-Imports:
+Suggests: 
+    knitr,
+    rmarkdown,
+    covr,
+    testthat,
     tidyverse,
     matrixStats,
     oro.nifti,
@@ -24,12 +28,7 @@ Imports:
     plotly,
     broom,
     dslabs,
-    binom
-Suggests: 
-    knitr,
-    rmarkdown,
-    covr,
-    testthat
+    binom    
 Encoding: UTF-8
 LazyData: true
 ByteCompile: true
