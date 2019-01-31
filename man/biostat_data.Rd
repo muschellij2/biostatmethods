@@ -18,4 +18,5 @@ Data from Methods in Biostatistics in R
 \examples{
 biostat_data("bmi_age.txt")
 biostat_data("FLAIR.nii.gz")
+testthat::expect_error(biostat_data("shhs1.txt"))
 }

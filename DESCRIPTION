@@ -1,5 +1,5 @@
 Package: biostatmethods
-Version: 0.1.0
+Version: 0.1.1
 Title: Data and Code for Methods in Biostatistics in R
 Description: Accompanying code and data from the book "Methods in Biostatistics with R".
 Authors@R: c(
@@ -12,6 +12,8 @@ Authors@R: c(
     role = "aut")
     )
 License: GPL-3
+Imports: 
+    utils
 Suggests: 
     knitr,
     rmarkdown,
@@ -36,4 +38,4 @@ Type: Package
 VignetteBuilder: knitr
 URL: https://github.com/muschellij2/biostatmethods
 BugReports: https://github.com/muschellij2/biostatmethods/issues
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.1
