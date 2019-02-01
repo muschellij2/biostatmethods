@@ -1,3 +1,5 @@
+^inst/extdata/shhs1\.txt$
+^inst/extdata/shhs1\.csv$
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^biostatmethods\.Rproj$

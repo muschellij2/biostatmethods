@@ -13,7 +13,8 @@ Authors@R: c(
     )
 License: GPL-3
 Imports: 
-    utils
+    utils,
+    nsrr
 Suggests: 
     knitr,
     rmarkdown,
@@ -35,6 +36,7 @@ Encoding: UTF-8
 LazyData: true
 ByteCompile: true
 Type: Package
+Remotes: muschellij2/nsrr
 VignetteBuilder: knitr
 URL: https://github.com/muschellij2/biostatmethods
 BugReports: https://github.com/muschellij2/biostatmethods/issues
