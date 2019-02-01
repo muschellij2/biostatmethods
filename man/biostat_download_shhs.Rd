@@ -19,5 +19,8 @@ A logical if the data was downloaded
 Download SHHS data
 }
 \examples{
-biostat_download_shhs()
+token = nsrr::nsrr_token()
+if (!is.null(token)) {
+    biostat_download_shhs()
+}
 }

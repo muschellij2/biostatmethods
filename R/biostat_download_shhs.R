@@ -8,7 +8,10 @@
 #' @export
 #'
 #' @examples
-#' biostat_download_shhs()
+#' token = nsrr::nsrr_token()
+#' if (!is.null(token)) {
+#'     biostat_download_shhs()
+#' }
 biostat_download_shhs = function(
   token = nsrr::nsrr_token(),
   out_dir = system.file(package = "biostatmethods")) {
