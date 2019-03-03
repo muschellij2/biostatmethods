@@ -21,10 +21,9 @@ Download SHHS data
 \examples{
 token = nsrr::nsrr_token()
 if (!is.null(token)) {
-    biostat_download_shhs()
-   testthat::expect_true(res)
-} else {
-   res = biostat_download_shhs()
-   testthat::expect_false(res)
+    res = biostat_download_shhs()
+    testthat::expect_true(res)
 }
+res = biostat_download_shhs(token = "")
+testthat::expect_false(res)
 }
