@@ -1,5 +1,5 @@
 Package: biostatmethods
-Version: 0.1.1
+Version: 0.1.2
 Title: Data and Code for Methods in Biostatistics in R
 Description: Accompanying code and data from the book "Methods in Biostatistics with R".
 Authors@R: c(

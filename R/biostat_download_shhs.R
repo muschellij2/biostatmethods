@@ -11,6 +11,10 @@
 #' token = nsrr::nsrr_token()
 #' if (!is.null(token)) {
 #'     biostat_download_shhs()
+#'    testthat::expect_true(res)
+#' } else {
+#'    res = biostat_download_shhs()
+#'    testthat::expect_false(res)
 #' }
 biostat_download_shhs = function(
   token = nsrr::nsrr_token(),
@@ -23,6 +27,7 @@ biostat_download_shhs = function(
   if (res$success) {
     file.copy(res$outfile, outfile, overwrite = TRUE)
   }
-  return(res$success)
-
+  success = res$success
+  attr(success, "outfile") = outfile
+  return(success)
 }
