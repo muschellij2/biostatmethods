@@ -2,6 +2,7 @@
 #'
 #' @param token Token for 'NSRR' data resource, to pass to
 #' @param out_dir Directory to download the file
+#' @param overwrite Should the file be overwritten if exists already?
 #'
 #' @return A logical if the data was downloaded
 #' @importFrom nsrr nsrr_download_file nsrr_token
@@ -9,24 +10,29 @@
 #'
 #' @examples
 #' token = nsrr::nsrr_token()
+#' res = biostat_download_shhs(token = "", overwrite = TRUE)
+#' testthat::expect_false(res)
 #' if (!is.null(token)) {
 #'     res = biostat_download_shhs()
 #'     testthat::expect_true(res)
 #' }
-#' res = biostat_download_shhs(token = "")
-#' testthat::expect_false(res)
 biostat_download_shhs = function(
   token = nsrr::nsrr_token(),
-  out_dir = system.file(package = "biostatmethods")) {
+  out_dir = system.file("extdata", package = "biostatmethods"),
+  overwrite = FALSE) {
   args = list(dataset = "shhs",
               path = "biostatistics-with-r/shhs1.txt")
   args$token = token
-  res = do.call(nsrr::nsrr_download_file, args = args)
   outfile = file.path(out_dir, "shhs1.txt")
-  if (res$success) {
-    file.copy(res$outfile, outfile, overwrite = TRUE)
+  if (!file.exists(outfile) | overwrite) {
+    res = do.call(nsrr::nsrr_download_file, args = args)
+    if (res$success) {
+      file.copy(res$outfile, outfile, overwrite = TRUE)
+    }
+    success = res$success
+  } else {
+    success = file.exists(outfile)
   }
-  success = res$success
   attr(success, "outfile") = outfile
   return(success)
 }

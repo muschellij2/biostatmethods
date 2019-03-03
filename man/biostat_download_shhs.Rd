@@ -5,12 +5,15 @@
 \title{Download SHHS data}
 \usage{
 biostat_download_shhs(token = nsrr::nsrr_token(),
-  out_dir = system.file(package = "biostatmethods"))
+  out_dir = system.file("extdata", package = "biostatmethods"),
+  overwrite = FALSE)
 }
 \arguments{
 \item{token}{Token for 'NSRR' data resource, to pass to}
 
 \item{out_dir}{Directory to download the file}
+
+\item{overwrite}{Should the file be overwritten if exists already?}
 }
 \value{
 A logical if the data was downloaded
@@ -20,10 +23,10 @@ Download SHHS data
 }
 \examples{
 token = nsrr::nsrr_token()
+res = biostat_download_shhs(token = "", overwrite = TRUE)
+testthat::expect_false(res)
 if (!is.null(token)) {
     res = biostat_download_shhs()
     testthat::expect_true(res)
 }
-res = biostat_download_shhs(token = "")
-testthat::expect_false(res)
 }

@@ -9,7 +9,17 @@
 #' @examples
 #' biostat_data("bmi_age.txt")
 #' biostat_data("FLAIR.nii.gz")
+#' ff = system.file("extdata", "shhs1.txt", package = "biostatmethods")
+#' if (file.exists(ff)) {
+#'    file.remove(ff)
+#' }
 #' testthat::expect_error(biostat_data("shhs1.txt"))
+#' token = nsrr::nsrr_token()
+#' if (!is.null(token)) {
+#'    if (biostat_download_shhs()) {
+#'       biostat_data("shhs1.txt")
+#'    }
+#' }
 biostat_data = function(...) {
   args = list(...)
   args = unlist(args)
